@@ -150,20 +150,20 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/lamp-400.jpg" 
-                                     srcset="images/thumbs/post/lamp-400.jpg 1x, images/thumbs/post/lamp-800.jpg 2x" alt="">
+                                <img src="${list.get(0).pathImage}"
+                                     srcset="${list.get(0).pathImage} 1x,${list.get(0).pathImage}  2x" alt="">
                             </a>
                         </div>
         
                         <div class="item-entry__text">    
                             <div class="item-entry__cat">
-                                <a href="category.html">Design</a> 
+                                <a href="category.html">${list.get(0).category}</a>
                             </div>
     
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">3 Benefits of Minimalism In Interior Design.</a></h1>
-                                
+                            <h1 class="item-entry__title"><a href="single-standard.jsp">${list.get(0).title}</a></h1>
+
                             <div class="item-entry__date">
-                                <a href="single-standard.jsp">June 15, 2018</a>
+                                <a href="single-standard.jsp">${list.get(0).date}</a>
                             </div>
                         </div>
                     </div> <!-- item-entry -->

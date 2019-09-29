@@ -15,8 +15,9 @@ public class PostRestController {
     private PostDAO postDAO = new PostDAO();
     @RequestMapping(value = "/posts",
         method = RequestMethod.GET,
-        produces = {MediaType.APPLICATION_JSON_VALUE,
-        MediaType.APPLICATION_XML_VALUE})
+        produces = {MediaType.APPLICATION_JSON_VALUE
+             //   , MediaType.APPLICATION_XML_VALUE
+    })
     @ResponseBody
     public List<Post> getPosts() {
         List<Post> list = postDAO.getAllPosts();
