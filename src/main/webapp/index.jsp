@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html class="no-js" lang="en">
 <head>
 
@@ -144,307 +145,36 @@
         
         <div class="row entries-wrap wide">
             <div class="entries">
+                <c:if test="${not empty list}">
+                <c:forEach  var = "post" items = "${list}">
 
-                <article class="col-block">
-                    
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="${list.get(0).pathImage}"
-                                     srcset="${list.get(0).pathImage} 1x,${list.get(0).pathImage}  2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">    
-                            <div class="item-entry__cat">
-                                <a href="category.html">${list.get(0).category}</a>
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">${list.get(0).title}</a></h1>
+                    <article class="col-block">
 
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">${list.get(0).date}</a>
+                        <div class="item-entry" data-aos="zoom-in">
+                            <div class="item-entry__thumb">
+                                <a href="single-standard.jsp" class="item-entry__thumb-link">
+                                    <img src="${post.pathImage}"
+                                         srcset="${post.pathImage} 1x,${post.pathImage}  2x" alt="">
+                                </a>
                             </div>
-                        </div>
-                    </div> <!-- item-entry -->
 
-                </article> <!-- end article -->
+                            <div class="item-entry__text">
+                                <div class="item-entry__cat">
+                                    <a href="category.html">${post.category}</a>
+                                </div>
 
-                <article class="col-block">
-                    
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/tulips-400.jpg" 
-                                     srcset="images/thumbs/post/tulips-400.jpg 1x, images/thumbs/post/tulips-800.jpg 2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">
-                            <div class="item-entry__cat">
-                                <a href="category.html">Health</a>
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">10 Interesting Facts About Caffeine.</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">June 14, 2018</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
-    
-                </article> <!-- end article -->
+                                <h1 class="item-entry__title"><a href="single-standard.jsp">${post.title}</a></h1>
 
-                <article class="col-block">
-                    
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/music-400.jpg" 
-                                     srcset="images/thumbs/post/music-400.jpg 1x, images/thumbs/post/music-800.jpg 2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">
-                            <div class="item-entry__cat">
-                                <a href="category.html">Health</a>
+                                <div class="item-entry__date">
+                                    <a href="single-standard.jsp">${post.date}</a>
+                                </div>
                             </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">The Power of Music to Reduce Stress.</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">June 14, 2018</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
-    
-                </article> <!-- end article -->
+                        </div> <!-- item-entry -->
 
-                <article class="col-block">
-                
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/watch-400.jpg" 
-                                     srcset="images/thumbs/post/watch-400.jpg 1x, images/thumbs/post/watch-800.jpg 2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">
-                            <div class="item-entry__cat">
-                                <a href="category.html">Management</a>
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">The Pomodoro Technique Really Works.</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">June 12, 2018</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
+                    </article> <!-- end article -->
 
-                </article> <!-- end article -->
-
-                <article class="col-block">
-                
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/wheel-400.jpg" 
-                                     srcset="images/thumbs/post/wheel-400.jpg 1x, images/thumbs/post/wheel-800.jpg 2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">
-                            <div class="item-entry__cat">
-                                <a href="category.html">Lifestyle</a>
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">Visiting Theme Parks Improves Your Health.</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">June 12, 2017</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
-    
-                </article> <!-- end article -->
-
-                <article class="col-block">
-                
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/guitarist-400.jpg" 
-                                     srcset="images/thumbs/post/guitarist-400.jpg 1x, images/thumbs/post/guitarist-800.jpg 2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">
-                            <div class="item-entry__cat">
-                                <a href="category.html">Music</a>
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">What Your Music Preference Says About You and Your Personality.</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">June 02, 2018</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
-    
-                </article> <!-- end article -->
-
-                <article class="col-block">
-                
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/jump-400.jpg" 
-                                     srcset="images/thumbs/post/jump-400.jpg 1x, images/thumbs/post/jump-800.jpg 2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">
-                            <div class="item-entry__cat">
-                                <a href="category.html">Relationships</a> 
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">Create Meaningful Family Moments.</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">June 02, 2018</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
-    
-                </article> <!-- end article -->
-
-                <article class="col-block">
-                
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/flowers-400.jpg" 
-                                     srcset="images/thumbs/post/flowers-400.jpg 1x, images/thumbs/post/flowers-800.jpg 2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">
-                            <div class="item-entry__cat">
-                                <a href="category.html">Lifestyle</a>
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">Gardening: The Secret to Happiness.</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">June 01, 2018</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
-    
-                </article> <!-- end article -->
-
-                <article class="col-block">
-                
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/woodcraft-400.jpg" 
-                                     srcset="images/thumbs/post/woodcraft-400.jpg 1x, images/thumbs/post/woodcraft-800.jpg 2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">
-                            <div class="item-entry__cat">
-                                <a href="category.html">Creativity</a>
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">An Examination of Minimalistic Design.</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">May 30, 2018</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
-    
-                </article> <!-- end article -->
-
-                <article class="col-block">
-                
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/fuji-400.jpg" 
-                                     srcset="images/thumbs/post/fuji-400.jpg 1x, images/thumbs/post/fuji-800.jpg 2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">
-                            <div class="item-entry__cat">
-                                <a href="category.html">Creativity</a>
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">What Skills Are Required For a Photographer?</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">May 30, 2018</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
-    
-                </article> <!-- end article -->
-
-                <article class="col-block">
-                
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/beetle-400.jpg" 
-                                     srcset="images/thumbs/post/beetle-400.jpg 1x, images/thumbs/post/beetle-800.jpg 2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">
-                            <div class="item-entry__cat">
-                                <a href="category.html">Lifestyle</a>
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">Throwback To The Good Old Days.</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">May 28, 2018</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
-    
-                </article> <!-- end article -->
-
-                <article class="col-block">
-                
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.jsp" class="item-entry__thumb-link">
-                                <img src="images/thumbs/post/sydney-400.jpg" 
-                                     srcset="images/thumbs/post/sydney-400.jpg 1x, images/thumbs/post/sydney-800.jpg 2x" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">
-                            <div class="item-entry__cat">
-                                <a href="category.html">Travel</a> 
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.jsp">Planning Your First Trip To Sydney.</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.jsp">May 28, 2018</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
-    
-                </article> <!-- end article -->
-
+                </c:forEach>
+                </c:if>
             </div> <!-- end entries -->
         </div> <!-- end entries-wrap -->
 

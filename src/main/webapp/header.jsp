@@ -34,12 +34,12 @@
                 <li class="has-children">
                     <a href="#0" title="">Categories</a>
                     <ul class="sub-menu">
-                        <li><a href="category.jsp">Lifestyle</a></li>
-                        <li><a href="category.jsp">Health</a></li>
-                        <li><a href="category.jsp">Family</a></li>
-                        <li><a href="category.jsp">Management</a></li>
-                        <li><a href="category.jsp">Travel</a></li>
-                        <li><a href="category.jsp">Work</a></li>
+                        <li><a href="categoryLifestyle">Lifestyle</a></li>
+                        <li><a href="categoryHealth">Health</a></li>
+                        <li><a href="categoryFamily">Family</a></li>
+                        <li><a href="categoryManagement">Management</a></li>
+                        <li><a href="categoryTravel">Travel</a></li>
+                        <li><a href="categoryWork">Work</a></li>
                     </ul>
                 </li>
                 <li class="has-children">
